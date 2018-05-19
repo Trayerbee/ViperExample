@@ -7,9 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4014235920AE0E6E00CB5A19 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014234B20AE0E6E00CB5A19 /* RealmSwift.framework */; };
+		4014235F20AE0E6E00CB5A19 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014235120AE0E6E00CB5A19 /* Viperit.framework */; };
+		4014236020AE0E6E00CB5A19 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014235220AE0E6E00CB5A19 /* Realm.framework */; };
+		407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */; };
+		407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */; };
+		407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759720AEEF49007B0AF1 /* GoogleMaps.framework */; };
+		407D759C20AEF010007B0AF1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 407D759B20AEF010007B0AF1 /* GoogleMaps.bundle */; };
+		407D75A120AEF06B007B0AF1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759D20AEF04E007B0AF1 /* CoreData.framework */; };
+		407D75A220AEF06F007B0AF1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759F20AEF057007B0AF1 /* Accelerate.framework */; };
+		407D75A420AEF078007B0AF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75A320AEF078007B0AF1 /* CoreGraphics.framework */; };
+		407D75A620AEF081007B0AF1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75A520AEF081007B0AF1 /* CoreLocation.framework */; };
+		407D75A820AEF089007B0AF1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75A720AEF089007B0AF1 /* CoreText.framework */; };
+		407D75AA20AEF08F007B0AF1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75A920AEF08F007B0AF1 /* GLKit.framework */; };
+		407D75AC20AEF096007B0AF1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75AB20AEF096007B0AF1 /* ImageIO.framework */; };
+		407D75AE20AEF0A3007B0AF1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75AD20AEF0A3007B0AF1 /* libc++.tbd */; };
+		407D75B020AEF0AD007B0AF1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75AF20AEF0AD007B0AF1 /* libz.tbd */; };
+		407D75B220AEF0B7007B0AF1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75B120AEF0B7007B0AF1 /* OpenGLES.framework */; };
+		407D75B420AEF0BF007B0AF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75B320AEF0BF007B0AF1 /* QuartzCore.framework */; };
+		407D75B620AEF0C7007B0AF1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75B520AEF0C7007B0AF1 /* SystemConfiguration.framework */; };
+		407D75B820AEF0CE007B0AF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75B720AEF0CE007B0AF1 /* UIKit.framework */; };
+		407D75C020AF4BB2007B0AF1 /* GasStations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407D75B920AF4BB2007B0AF1 /* GasStations.storyboard */; };
+		407D75C120AF4BB2007B0AF1 /* GasStationsDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BA20AF4BB2007B0AF1 /* GasStationsDisplayData.swift */; };
+		407D75C220AF4BB2007B0AF1 /* GasStationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BB20AF4BB2007B0AF1 /* GasStationsPresenter.swift */; };
+		407D75C320AF4BB2007B0AF1 /* GasStationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BC20AF4BB2007B0AF1 /* GasStationsRouter.swift */; };
+		407D75C420AF4BB2007B0AF1 /* GasStationsModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BD20AF4BB2007B0AF1 /* GasStationsModuleApi.swift */; };
+		407D75C520AF4BB2007B0AF1 /* GasStationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BE20AF4BB2007B0AF1 /* GasStationsInteractor.swift */; };
+		407D75C620AF4BB2007B0AF1 /* GasStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75BF20AF4BB2007B0AF1 /* GasStationsView.swift */; };
+		407D75C820AF516F007B0AF1 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75C720AF516F007B0AF1 /* AppModules.swift */; };
+		407D75D220AF5492007B0AF1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75CE20AF5492007B0AF1 /* RxSwift.framework */; };
+		407D75D320AF5492007B0AF1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D75CF20AF5492007B0AF1 /* RxCocoa.framework */; };
+		407D75DB20AF572E007B0AF1 /* Sharing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407D75D420AF572E007B0AF1 /* Sharing.storyboard */; };
+		407D75DC20AF572E007B0AF1 /* SharingDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75D520AF572E007B0AF1 /* SharingDisplayData.swift */; };
+		407D75DD20AF572E007B0AF1 /* SharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75D620AF572E007B0AF1 /* SharingPresenter.swift */; };
+		407D75DE20AF572E007B0AF1 /* SharingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75D720AF572E007B0AF1 /* SharingRouter.swift */; };
+		407D75DF20AF572E007B0AF1 /* SharingModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75D820AF572E007B0AF1 /* SharingModuleApi.swift */; };
+		407D75E020AF572E007B0AF1 /* SharingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75D920AF572E007B0AF1 /* SharingInteractor.swift */; };
+		407D75E120AF572E007B0AF1 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75DA20AF572E007B0AF1 /* SharingView.swift */; };
+		407D75EA20AF5785007B0AF1 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407D75E320AF5785007B0AF1 /* Map.storyboard */; };
+		407D75EB20AF5785007B0AF1 /* MapDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E420AF5785007B0AF1 /* MapDisplayData.swift */; };
+		407D75EC20AF5785007B0AF1 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E520AF5785007B0AF1 /* MapPresenter.swift */; };
+		407D75ED20AF5785007B0AF1 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E620AF5785007B0AF1 /* MapRouter.swift */; };
+		407D75EE20AF5785007B0AF1 /* MapModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E720AF5785007B0AF1 /* MapModuleApi.swift */; };
+		407D75EF20AF5785007B0AF1 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E820AF5785007B0AF1 /* MapInteractor.swift */; };
+		407D75F020AF5785007B0AF1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D75E920AF5785007B0AF1 /* MapView.swift */; };
+		4094BFBB20B05FFD001E41B9 /* GasStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094BFB920B05FFD001E41B9 /* GasStationTableViewCell.swift */; };
+		4094BFBE20B070FD001E41B9 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094BFBD20B070FD001E41B9 /* StyleGuide.swift */; };
 		40C319C120AD7C6A00505C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C319C020AD7C6A00505C22 /* AppDelegate.swift */; };
-		40C319C320AD7C6A00505C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C319C220AD7C6A00505C22 /* ViewController.swift */; };
-		40C319C620AD7C6A00505C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C319C420AD7C6A00505C22 /* Main.storyboard */; };
 		40C319C820AD7C6C00505C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C319C720AD7C6C00505C22 /* Assets.xcassets */; };
 		40C319CB20AD7C6C00505C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C319C920AD7C6C00505C22 /* LaunchScreen.storyboard */; };
 		40C319D620AD7C6C00505C22 /* PetrolPatrolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C319D520AD7C6C00505C22 /* PetrolPatrolTests.swift */; };
@@ -34,10 +78,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4014234B20AE0E6E00CB5A19 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		4014235120AE0E6E00CB5A19 /* Viperit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Viperit.framework; path = Carthage/Build/iOS/Viperit.framework; sourceTree = SOURCE_ROOT; };
+		4014235220AE0E6E00CB5A19 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
+		407D759720AEEF49007B0AF1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		407D759B20AEF010007B0AF1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		407D759D20AEF04E007B0AF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		407D759F20AEF057007B0AF1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		407D75A320AEF078007B0AF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		407D75A520AEF081007B0AF1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		407D75A720AEF089007B0AF1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		407D75A920AEF08F007B0AF1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		407D75AB20AEF096007B0AF1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		407D75AD20AEF0A3007B0AF1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		407D75AF20AEF0AD007B0AF1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		407D75B120AEF0B7007B0AF1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		407D75B320AEF0BF007B0AF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		407D75B520AEF0C7007B0AF1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		407D75B720AEF0CE007B0AF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		407D75B920AF4BB2007B0AF1 /* GasStations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GasStations.storyboard; sourceTree = "<group>"; };
+		407D75BA20AF4BB2007B0AF1 /* GasStationsDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsDisplayData.swift; sourceTree = "<group>"; };
+		407D75BB20AF4BB2007B0AF1 /* GasStationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsPresenter.swift; sourceTree = "<group>"; };
+		407D75BC20AF4BB2007B0AF1 /* GasStationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsRouter.swift; sourceTree = "<group>"; };
+		407D75BD20AF4BB2007B0AF1 /* GasStationsModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsModuleApi.swift; sourceTree = "<group>"; };
+		407D75BE20AF4BB2007B0AF1 /* GasStationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsInteractor.swift; sourceTree = "<group>"; };
+		407D75BF20AF4BB2007B0AF1 /* GasStationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsView.swift; sourceTree = "<group>"; };
+		407D75C720AF516F007B0AF1 /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
+		407D75CE20AF5492007B0AF1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		407D75CF20AF5492007B0AF1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		407D75D420AF572E007B0AF1 /* Sharing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sharing.storyboard; sourceTree = "<group>"; };
+		407D75D520AF572E007B0AF1 /* SharingDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingDisplayData.swift; sourceTree = "<group>"; };
+		407D75D620AF572E007B0AF1 /* SharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingPresenter.swift; sourceTree = "<group>"; };
+		407D75D720AF572E007B0AF1 /* SharingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingRouter.swift; sourceTree = "<group>"; };
+		407D75D820AF572E007B0AF1 /* SharingModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingModuleApi.swift; sourceTree = "<group>"; };
+		407D75D920AF572E007B0AF1 /* SharingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingInteractor.swift; sourceTree = "<group>"; };
+		407D75DA20AF572E007B0AF1 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
+		407D75E320AF5785007B0AF1 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		407D75E420AF5785007B0AF1 /* MapDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayData.swift; sourceTree = "<group>"; };
+		407D75E520AF5785007B0AF1 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		407D75E620AF5785007B0AF1 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		407D75E720AF5785007B0AF1 /* MapModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModuleApi.swift; sourceTree = "<group>"; };
+		407D75E820AF5785007B0AF1 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		407D75E920AF5785007B0AF1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4094BFB920B05FFD001E41B9 /* GasStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationTableViewCell.swift; sourceTree = "<group>"; };
+		4094BFBD20B070FD001E41B9 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		40C319BD20AD7C6A00505C22 /* PetrolPatrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetrolPatrol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C319C020AD7C6A00505C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40C319C220AD7C6A00505C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		40C319C520AD7C6A00505C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40C319C720AD7C6C00505C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C319CA20AD7C6C00505C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C319CC20AD7C6C00505C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +142,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407D75A620AEF081007B0AF1 /* CoreLocation.framework in Frameworks */,
+				407D75B820AEF0CE007B0AF1 /* UIKit.framework in Frameworks */,
+				407D75B620AEF0C7007B0AF1 /* SystemConfiguration.framework in Frameworks */,
+				407D75B420AEF0BF007B0AF1 /* QuartzCore.framework in Frameworks */,
+				407D75B220AEF0B7007B0AF1 /* OpenGLES.framework in Frameworks */,
+				407D75D320AF5492007B0AF1 /* RxCocoa.framework in Frameworks */,
+				407D75B020AEF0AD007B0AF1 /* libz.tbd in Frameworks */,
+				407D75AE20AEF0A3007B0AF1 /* libc++.tbd in Frameworks */,
+				407D75D220AF5492007B0AF1 /* RxSwift.framework in Frameworks */,
+				407D75AC20AEF096007B0AF1 /* ImageIO.framework in Frameworks */,
+				407D75AA20AEF08F007B0AF1 /* GLKit.framework in Frameworks */,
+				407D75A820AEF089007B0AF1 /* CoreText.framework in Frameworks */,
+				407D75A420AEF078007B0AF1 /* CoreGraphics.framework in Frameworks */,
+				407D75A220AEF06F007B0AF1 /* Accelerate.framework in Frameworks */,
+				407D75A120AEF06B007B0AF1 /* CoreData.framework in Frameworks */,
+				4014235F20AE0E6E00CB5A19 /* Viperit.framework in Frameworks */,
+				4014236020AE0E6E00CB5A19 /* Realm.framework in Frameworks */,
+				407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */,
+				4014235920AE0E6E00CB5A19 /* RealmSwift.framework in Frameworks */,
+				407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */,
+				407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +183,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4014234420AE0E5E00CB5A19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407D75CF20AF5492007B0AF1 /* RxCocoa.framework */,
+				407D75CE20AF5492007B0AF1 /* RxSwift.framework */,
+				407D75B720AEF0CE007B0AF1 /* UIKit.framework */,
+				407D75B520AEF0C7007B0AF1 /* SystemConfiguration.framework */,
+				407D75B320AEF0BF007B0AF1 /* QuartzCore.framework */,
+				407D75B120AEF0B7007B0AF1 /* OpenGLES.framework */,
+				407D75AF20AEF0AD007B0AF1 /* libz.tbd */,
+				407D75AD20AEF0A3007B0AF1 /* libc++.tbd */,
+				407D75AB20AEF096007B0AF1 /* ImageIO.framework */,
+				407D75A920AEF08F007B0AF1 /* GLKit.framework */,
+				407D75A720AEF089007B0AF1 /* CoreText.framework */,
+				407D75A520AEF081007B0AF1 /* CoreLocation.framework */,
+				407D75A320AEF078007B0AF1 /* CoreGraphics.framework */,
+				407D759F20AEF057007B0AF1 /* Accelerate.framework */,
+				407D759D20AEF04E007B0AF1 /* CoreData.framework */,
+				407D759B20AEF010007B0AF1 /* GoogleMaps.bundle */,
+				407D759720AEEF49007B0AF1 /* GoogleMaps.framework */,
+				407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */,
+				407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */,
+				4014235220AE0E6E00CB5A19 /* Realm.framework */,
+				4014234B20AE0E6E00CB5A19 /* RealmSwift.framework */,
+				4014235120AE0E6E00CB5A19 /* Viperit.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		407D75C920AF5175007B0AF1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				40C319C720AD7C6C00505C22 /* Assets.xcassets */,
+				407D75C720AF516F007B0AF1 /* AppModules.swift */,
+				40C319C020AD7C6A00505C22 /* AppDelegate.swift */,
+				40C319C920AD7C6C00505C22 /* LaunchScreen.storyboard */,
+				40C319CC20AD7C6C00505C22 /* Info.plist */,
+				4094BFBD20B070FD001E41B9 /* StyleGuide.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		407D75CA20AF5188007B0AF1 /* GasStationModule */ = {
+			isa = PBXGroup;
+			children = (
+				407D75B920AF4BB2007B0AF1 /* GasStations.storyboard */,
+				4094BFB920B05FFD001E41B9 /* GasStationTableViewCell.swift */,
+				407D75BA20AF4BB2007B0AF1 /* GasStationsDisplayData.swift */,
+				407D75BB20AF4BB2007B0AF1 /* GasStationsPresenter.swift */,
+				407D75BC20AF4BB2007B0AF1 /* GasStationsRouter.swift */,
+				407D75BD20AF4BB2007B0AF1 /* GasStationsModuleApi.swift */,
+				407D75BE20AF4BB2007B0AF1 /* GasStationsInteractor.swift */,
+				407D75BF20AF4BB2007B0AF1 /* GasStationsView.swift */,
+			);
+			path = GasStationModule;
+			sourceTree = "<group>";
+		};
+		407D75E220AF573C007B0AF1 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				407D75D420AF572E007B0AF1 /* Sharing.storyboard */,
+				407D75D520AF572E007B0AF1 /* SharingDisplayData.swift */,
+				407D75D620AF572E007B0AF1 /* SharingPresenter.swift */,
+				407D75D820AF572E007B0AF1 /* SharingModuleApi.swift */,
+				407D75D920AF572E007B0AF1 /* SharingInteractor.swift */,
+				407D75DA20AF572E007B0AF1 /* SharingView.swift */,
+				407D75D720AF572E007B0AF1 /* SharingRouter.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		407D75F120AF5788007B0AF1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				407D75E320AF5785007B0AF1 /* Map.storyboard */,
+				407D75E420AF5785007B0AF1 /* MapDisplayData.swift */,
+				407D75E520AF5785007B0AF1 /* MapPresenter.swift */,
+				407D75E620AF5785007B0AF1 /* MapRouter.swift */,
+				407D75E720AF5785007B0AF1 /* MapModuleApi.swift */,
+				407D75E820AF5785007B0AF1 /* MapInteractor.swift */,
+				407D75E920AF5785007B0AF1 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		407D75F220AF579C007B0AF1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				407D75F120AF5788007B0AF1 /* Map */,
+				407D75E220AF573C007B0AF1 /* Sharing */,
+				407D75CA20AF5188007B0AF1 /* GasStationModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		40C319B420AD7C6A00505C22 = {
 			isa = PBXGroup;
 			children = (
+				4014234420AE0E5E00CB5A19 /* Frameworks */,
 				40C319BF20AD7C6A00505C22 /* PetrolPatrol */,
 				40C319D420AD7C6C00505C22 /* PetrolPatrolTests */,
 				40C319DF20AD7C6C00505C22 /* PetrolPatrolUITests */,
@@ -97,12 +302,8 @@
 		40C319BF20AD7C6A00505C22 /* PetrolPatrol */ = {
 			isa = PBXGroup;
 			children = (
-				40C319C020AD7C6A00505C22 /* AppDelegate.swift */,
-				40C319C220AD7C6A00505C22 /* ViewController.swift */,
-				40C319C420AD7C6A00505C22 /* Main.storyboard */,
-				40C319C720AD7C6C00505C22 /* Assets.xcassets */,
-				40C319C920AD7C6C00505C22 /* LaunchScreen.storyboard */,
-				40C319CC20AD7C6C00505C22 /* Info.plist */,
+				407D75F220AF579C007B0AF1 /* Modules */,
+				407D75C920AF5175007B0AF1 /* Supporting */,
 			);
 			path = PetrolPatrol;
 			sourceTree = "<group>";
@@ -135,6 +336,7 @@
 				40C319B920AD7C6A00505C22 /* Sources */,
 				40C319BA20AD7C6A00505C22 /* Frameworks */,
 				40C319BB20AD7C6A00505C22 /* Resources */,
+				407D75CB20AF544F007B0AF1 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -230,8 +432,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C319CB20AD7C6C00505C22 /* LaunchScreen.storyboard in Resources */,
+				407D75C020AF4BB2007B0AF1 /* GasStations.storyboard in Resources */,
 				40C319C820AD7C6C00505C22 /* Assets.xcassets in Resources */,
-				40C319C620AD7C6A00505C22 /* Main.storyboard in Resources */,
+				407D75DB20AF572E007B0AF1 /* Sharing.storyboard in Resources */,
+				407D759C20AEF010007B0AF1 /* GoogleMaps.bundle in Resources */,
+				407D75EA20AF5785007B0AF1 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +456,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		407D75CB20AF544F007B0AF1 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Viperit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Viperit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40C319B920AD7C6A00505C22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C319C320AD7C6A00505C22 /* ViewController.swift in Sources */,
+				407D75DC20AF572E007B0AF1 /* SharingDisplayData.swift in Sources */,
+				407D75DE20AF572E007B0AF1 /* SharingRouter.swift in Sources */,
+				407D75EB20AF5785007B0AF1 /* MapDisplayData.swift in Sources */,
+				407D75EC20AF5785007B0AF1 /* MapPresenter.swift in Sources */,
+				407D75ED20AF5785007B0AF1 /* MapRouter.swift in Sources */,
+				407D75C220AF4BB2007B0AF1 /* GasStationsPresenter.swift in Sources */,
+				407D75C320AF4BB2007B0AF1 /* GasStationsRouter.swift in Sources */,
+				407D75DD20AF572E007B0AF1 /* SharingPresenter.swift in Sources */,
+				407D75C620AF4BB2007B0AF1 /* GasStationsView.swift in Sources */,
+				4094BFBE20B070FD001E41B9 /* StyleGuide.swift in Sources */,
+				407D75EE20AF5785007B0AF1 /* MapModuleApi.swift in Sources */,
+				4094BFBB20B05FFD001E41B9 /* GasStationTableViewCell.swift in Sources */,
+				407D75C420AF4BB2007B0AF1 /* GasStationsModuleApi.swift in Sources */,
+				407D75E120AF572E007B0AF1 /* SharingView.swift in Sources */,
 				40C319C120AD7C6A00505C22 /* AppDelegate.swift in Sources */,
+				407D75E020AF572E007B0AF1 /* SharingInteractor.swift in Sources */,
+				407D75C820AF516F007B0AF1 /* AppModules.swift in Sources */,
+				407D75DF20AF572E007B0AF1 /* SharingModuleApi.swift in Sources */,
+				407D75C120AF4BB2007B0AF1 /* GasStationsDisplayData.swift in Sources */,
+				407D75F020AF5785007B0AF1 /* MapView.swift in Sources */,
+				407D75EF20AF5785007B0AF1 /* MapInteractor.swift in Sources */,
+				407D75C520AF4BB2007B0AF1 /* GasStationsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +545,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		40C319C420AD7C6A00505C22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40C319C520AD7C6A00505C22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		40C319C920AD7C6C00505C22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,11 +676,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G5T356VCK;
-				INFOPLIST_FILE = PetrolPatrol/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PetrolPatrol/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilyas-karshigabekov.PetrolPatrol";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -450,11 +700,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G5T356VCK;
-				INFOPLIST_FILE = PetrolPatrol/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/PetrolPatrol/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilyas-karshigabekov.PetrolPatrol";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xqD-av-Raz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Gas stations-->
+        <scene sceneID="htw-l1-ahc">
+            <objects>
+                <viewController storyboardIdentifier="GasStationsView" id="xqD-av-Raz" customClass="GasStationsView" customModule="PetrolPatrol" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcR-ye-kTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="vb6-4r-Epx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgt-o0-aP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c71-BW-8jG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" rowHeight="90" id="rkZ-es-cW8" customClass="GasStationTableViewCell" customModule="PetrolPatrol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rkZ-es-cW8" id="yhC-E5-85l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enoc" translatesAutoresizingMaskIntoConstraints="NO" id="Dgy-IC-Ej1">
+                                                    <rect key="frame" x="10" y="14" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="nsD-Df-Qqh"/>
+                                                        <constraint firstAttribute="height" constant="60" id="qft-7s-Bby"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goI-pk-1L7">
+                                                    <rect key="frame" x="86" y="9" width="161" height="16.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16.5" id="fYP-kE-Wuw"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="ENOC">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="SFMono-Bold"/>
+                                                                <font key="NSOriginalFont" size="14" name="SFMono-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" / ">
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="SFMono-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="4min">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.28661888837814331" green="0.78349769115447998" blue="0.21858000755310059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFMono-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX1-M1-8kK">
+                                                    <rect key="frame" x="285" y="0.0" width="90" height="90"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spD-fD-783">
+                                                            <rect key="frame" x="21" y="11" width="48.5" height="28.5"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysE-72-sF7">
+                                                            <rect key="frame" x="21" y="45.5" width="48.5" height="3"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="3" id="Zw4-tt-PNx"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzf-PL-mjJ">
+                                                            <rect key="frame" x="23.5" y="54.5" width="44.5" height="28.5"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="24"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="spD-fD-783" firstAttribute="top" secondItem="UX1-M1-8kK" secondAttribute="top" constant="11" id="A2k-UJ-1MZ"/>
+                                                        <constraint firstAttribute="height" constant="90" id="JwR-zw-xjg"/>
+                                                        <constraint firstAttribute="width" constant="90" id="L9w-Qm-PCt"/>
+                                                        <constraint firstItem="fzf-PL-mjJ" firstAttribute="top" secondItem="ysE-72-sF7" secondAttribute="bottom" constant="6" id="SSn-Bc-bAu"/>
+                                                        <constraint firstItem="ysE-72-sF7" firstAttribute="top" secondItem="spD-fD-783" secondAttribute="bottom" constant="6" id="SUL-s7-4gE"/>
+                                                        <constraint firstItem="ysE-72-sF7" firstAttribute="width" secondItem="spD-fD-783" secondAttribute="width" id="ZBd-dB-BZB"/>
+                                                        <constraint firstItem="ysE-72-sF7" firstAttribute="centerX" secondItem="spD-fD-783" secondAttribute="centerX" id="dBg-FB-mM7"/>
+                                                        <constraint firstItem="spD-fD-783" firstAttribute="centerX" secondItem="UX1-M1-8kK" secondAttribute="centerX" id="lDJ-Tc-kq4"/>
+                                                        <constraint firstItem="fzf-PL-mjJ" firstAttribute="centerX" secondItem="UX1-M1-8kK" secondAttribute="centerX" id="xkD-o6-01Q"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zk-2g-pgw">
+                                                    <rect key="frame" x="86" y="30.5" width="170" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="PQE-Q9-k7S"/>
+                                                    </constraints>
+                                                    <string key="text">Al Khail Rd, E 44,
+Al Barsha South - Dubai, UAE</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="yWR-BZ-USA">
+                                                    <rect key="frame" x="255" y="12" width="20" height="10"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="evH-Ye-xlL"/>
+                                                        <constraint firstAttribute="width" constant="20" id="fyy-dX-UD7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-NM-ZeP">
+                                                    <rect key="frame" x="86" y="67" width="183" height="13.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="BDr-E8-sGb"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Hours:">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="SFMono-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" Today / ">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="SFMono-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Open 24 hours">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.28661888837814331" green="0.78349769115447998" blue="0.21858000755310059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="SFMono-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="UX1-M1-8kK" secondAttribute="bottom" id="0JS-u8-QEK"/>
+                                                <constraint firstItem="goI-pk-1L7" firstAttribute="top" secondItem="yhC-E5-85l" secondAttribute="top" constant="9" id="7TE-fs-SIq"/>
+                                                <constraint firstItem="UX1-M1-8kK" firstAttribute="leading" secondItem="yWR-BZ-USA" secondAttribute="trailing" constant="10" id="CkH-gY-nzD"/>
+                                                <constraint firstItem="goI-pk-1L7" firstAttribute="leading" secondItem="Dgy-IC-Ej1" secondAttribute="trailing" constant="16" id="Cy2-AP-FuN"/>
+                                                <constraint firstItem="8zk-2g-pgw" firstAttribute="top" secondItem="goI-pk-1L7" secondAttribute="bottom" constant="5" id="NMV-0P-R4h"/>
+                                                <constraint firstItem="Dgy-IC-Ej1" firstAttribute="leading" secondItem="yhC-E5-85l" secondAttribute="leading" constant="10" id="QbK-VJ-LAO"/>
+                                                <constraint firstItem="Dgy-IC-Ej1" firstAttribute="centerY" secondItem="yhC-E5-85l" secondAttribute="centerY" id="Z0T-sT-mze"/>
+                                                <constraint firstItem="UX1-M1-8kK" firstAttribute="leading" secondItem="eNW-NM-ZeP" secondAttribute="trailing" constant="16" id="a2w-4b-Xo7"/>
+                                                <constraint firstItem="eNW-NM-ZeP" firstAttribute="top" secondItem="8zk-2g-pgw" secondAttribute="bottom" constant="8" id="bzZ-eU-rrD"/>
+                                                <constraint firstItem="yWR-BZ-USA" firstAttribute="leading" secondItem="goI-pk-1L7" secondAttribute="trailing" constant="8" id="d43-9p-bb3"/>
+                                                <constraint firstItem="eNW-NM-ZeP" firstAttribute="leading" secondItem="Dgy-IC-Ej1" secondAttribute="trailing" constant="16" id="fuF-fX-u7J"/>
+                                                <constraint firstItem="UX1-M1-8kK" firstAttribute="leading" secondItem="8zk-2g-pgw" secondAttribute="trailing" constant="29" id="hVp-Gn-cw7"/>
+                                                <constraint firstAttribute="bottom" secondItem="eNW-NM-ZeP" secondAttribute="bottom" constant="9" id="j6J-Xh-xen"/>
+                                                <constraint firstItem="yWR-BZ-USA" firstAttribute="top" secondItem="yhC-E5-85l" secondAttribute="top" constant="12" id="kpn-l1-7VX"/>
+                                                <constraint firstItem="UX1-M1-8kK" firstAttribute="top" secondItem="yhC-E5-85l" secondAttribute="top" id="nbG-rf-3hU"/>
+                                                <constraint firstAttribute="trailing" secondItem="UX1-M1-8kK" secondAttribute="trailing" id="vej-Ow-L0D"/>
+                                                <constraint firstItem="8zk-2g-pgw" firstAttribute="leading" secondItem="Dgy-IC-Ej1" secondAttribute="trailing" constant="16" id="wqt-B1-O8x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="8zk-2g-pgw" id="JTE-7d-WIm"/>
+                                            <outlet property="currency" destination="fzf-PL-mjJ" id="gNr-1g-9aP"/>
+                                            <outlet property="logo" destination="Dgy-IC-Ej1" id="o22-gy-o7a"/>
+                                            <outlet property="nameAndETA" destination="goI-pk-1L7" id="Iyq-kQ-Vef"/>
+                                            <outlet property="price" destination="spD-fD-783" id="LpK-pM-tlQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="c71-BW-8jG" secondAttribute="bottom" id="3hD-8h-OwP"/>
+                            <constraint firstItem="c71-BW-8jG" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="E42-7J-WTP"/>
+                            <constraint firstItem="c71-BW-8jG" firstAttribute="top" secondItem="EcR-ye-kTk" secondAttribute="bottom" id="I5I-V9-Vog"/>
+                            <constraint firstAttribute="trailing" secondItem="c71-BW-8jG" secondAttribute="trailing" id="X4E-NV-6eQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gas stations" id="9ce-Xf-c2b">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="filter" id="Opw-5g-ISG"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="stationsTable" destination="c71-BW-8jG" id="Z0A-1p-BxK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293.60000000000002" y="355.7721139430285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" width="33" height="19"/>
+        <image name="enoc" width="121" height="121"/>
+        <image name="filter" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" red="0.28661888837814331" green="0.78349769115447998" blue="0.21858000755310059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
