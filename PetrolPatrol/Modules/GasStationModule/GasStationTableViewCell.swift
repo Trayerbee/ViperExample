@@ -27,7 +27,7 @@ class GasStationTableViewCell: UITableViewCell {
         
         mainAttributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: StyleGuide.greenColor(), range: NSRange(location: "\(stationData.brand) / ".count, length: stationData.eTA.count))
         
-        nameAndETA.attributedText = mainAttributedText.copy() as! NSAttributedString
+        nameAndETA.attributedText = mainAttributedText.copy() as? NSAttributedString
         
         address.text = stationData.address
         

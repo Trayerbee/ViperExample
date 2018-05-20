@@ -20,7 +20,7 @@ final class GasStationsView: UserInterface {
 //MARK: - GasStationsView API
 extension GasStationsView: GasStationsViewApi {
     func setDrivers() {
-        displayData.collectionDataDriver.debug("driving with").drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
+        displayData.collectionDataDriver.drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
         { (_, data: GasStationCellData, cell) in
             cell.setCellData(stationData: data)
             }.disposed(by: bag)

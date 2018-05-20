@@ -10,6 +10,7 @@
 		4014235920AE0E6E00CB5A19 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014234B20AE0E6E00CB5A19 /* RealmSwift.framework */; };
 		4014235F20AE0E6E00CB5A19 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014235120AE0E6E00CB5A19 /* Viperit.framework */; };
 		4014236020AE0E6E00CB5A19 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4014235220AE0E6E00CB5A19 /* Realm.framework */; };
+		40270A7920B1345D004F509A /* GasStationsMockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40270A7820B1345D004F509A /* GasStationsMockResponse.swift */; };
 		407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */; };
 		407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */; };
 		407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759720AEEF49007B0AF1 /* GoogleMaps.framework */; };
@@ -81,6 +82,7 @@
 		4014234B20AE0E6E00CB5A19 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		4014235120AE0E6E00CB5A19 /* Viperit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Viperit.framework; path = Carthage/Build/iOS/Viperit.framework; sourceTree = SOURCE_ROOT; };
 		4014235220AE0E6E00CB5A19 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		40270A7820B1345D004F509A /* GasStationsMockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationsMockResponse.swift; sourceTree = "<group>"; };
 		407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
 		407D759720AEEF49007B0AF1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		40270A7A20B13469004F509A /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				40270A7820B1345D004F509A /* GasStationsMockResponse.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
 		407D75C920AF5175007B0AF1 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +312,7 @@
 		40C319BF20AD7C6A00505C22 /* PetrolPatrol */ = {
 			isa = PBXGroup;
 			children = (
+				40270A7A20B13469004F509A /* Transport */,
 				407D75F220AF579C007B0AF1 /* Modules */,
 				407D75C920AF5175007B0AF1 /* Supporting */,
 			);
@@ -491,6 +502,7 @@
 				407D75DC20AF572E007B0AF1 /* SharingDisplayData.swift in Sources */,
 				407D75DE20AF572E007B0AF1 /* SharingRouter.swift in Sources */,
 				407D75EB20AF5785007B0AF1 /* MapDisplayData.swift in Sources */,
+				40270A7920B1345D004F509A /* GasStationsMockResponse.swift in Sources */,
 				407D75EC20AF5785007B0AF1 /* MapPresenter.swift in Sources */,
 				407D75ED20AF5785007B0AF1 /* MapRouter.swift in Sources */,
 				407D75C220AF4BB2007B0AF1 /* GasStationsPresenter.swift in Sources */,
