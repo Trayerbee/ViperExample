@@ -22,7 +22,7 @@ protocol GasStationsViewApi: UserInterfaceProtocol {
 
 //MARK: - GasStationsPresenter API
 protocol GasStationsPresenterApi: PresenterProtocol {
-    
+    var petrolType: PetrolType { get set }
 }
 
 //MARK: - GasStationsInteractor API

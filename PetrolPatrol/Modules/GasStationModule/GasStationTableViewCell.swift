@@ -20,7 +20,7 @@ class GasStationTableViewCell: UITableViewCell {
     
     func setCellData(stationData: GasStationCellData) {
         // Set image of brand
-        logo.image = UIImage(named: stationData.logo)
+        logo.image = stationData.logo
         
         // Set title of the cell brand + ETA, half of it is green.
         var mainAttributedText: NSMutableAttributedString = NSMutableAttributedString(string: "\(stationData.brand) / \(stationData.eTA)", attributes: StyleGuide.blackCellTitleAttributes())

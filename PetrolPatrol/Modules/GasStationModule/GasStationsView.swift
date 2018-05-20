@@ -14,6 +14,7 @@ import RxSwift
 //MARK: GasStationsView Class
 final class GasStationsView: UserInterface {
     @IBOutlet private var stationsTable: UITableView!
+    
     let bag = DisposeBag()
 }
 
@@ -25,8 +26,7 @@ extension GasStationsView: GasStationsViewApi {
             cell.setCellData(stationData: data)
             }.disposed(by: bag)
     }
-    
-}   
+}
 
 // MARK: - GasStationsView Viper Components API
 private extension GasStationsView {

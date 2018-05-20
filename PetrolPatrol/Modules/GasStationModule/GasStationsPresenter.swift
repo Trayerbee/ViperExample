@@ -11,7 +11,6 @@ import Viperit
 
 // MARK: - GasStationsPresenter Class
 final class GasStationsPresenter: Presenter {
-    var petrolType: PetrolType?
     
     override func viewIsAboutToAppear() {
         loadContent()
@@ -20,8 +19,16 @@ final class GasStationsPresenter: Presenter {
 
 // MARK: - GasStationsPresenter API
 extension GasStationsPresenter: GasStationsPresenterApi {
+    var petrolType: PetrolType {
+        get {
+            return .super98
+        }
+        set {
+            
+        }
+    }
+    
     func loadContent() {
-        
         view.setDrivers()
     }
     

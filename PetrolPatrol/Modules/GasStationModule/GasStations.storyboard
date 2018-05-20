@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Gas stations-->
+        <!--Gas Stations View-->
         <scene sceneID="htw-l1-ahc">
             <objects>
                 <viewController storyboardIdentifier="GasStationsView" id="xqD-av-Raz" customClass="GasStationsView" customModule="PetrolPatrol" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,11 +26,11 @@
                         <viewControllerLayoutGuide type="bottom" id="vb6-4r-Epx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgt-o0-aP8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c71-BW-8jG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" rowHeight="90" id="rkZ-es-cW8" customClass="GasStationTableViewCell" customModule="PetrolPatrol" customModuleProvider="target">
@@ -187,19 +187,46 @@ Al Barsha South - Dubai, UAE</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-Vh-x2I">
+                                <rect key="frame" x="8" y="8" width="359" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-4f-hjs" customClass="BorderedSquareButton" customModule="PetrolPatrol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.5" width="167.5" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="Y6o-Kn-lrl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="PRICE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="082-KZ-zb7" customClass="BorderedSquareButton" customModule="PetrolPatrol" customModuleProvider="target">
+                                        <rect key="frame" x="191.5" y="13.5" width="167.5" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="xuN-fY-YVl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="DISTANCE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="m3M-oO-BgW"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="c71-BW-8jG" secondAttribute="bottom" id="3hD-8h-OwP"/>
                             <constraint firstItem="c71-BW-8jG" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="E42-7J-WTP"/>
-                            <constraint firstItem="c71-BW-8jG" firstAttribute="top" secondItem="EcR-ye-kTk" secondAttribute="bottom" id="I5I-V9-Vog"/>
                             <constraint firstAttribute="trailing" secondItem="c71-BW-8jG" secondAttribute="trailing" id="X4E-NV-6eQ"/>
+                            <constraint firstItem="c71-BW-8jG" firstAttribute="top" secondItem="qC6-Vh-x2I" secondAttribute="bottom" constant="8" id="enh-nO-JQT"/>
+                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="top" secondItem="kgt-o0-aP8" secondAttribute="top" constant="8" id="f6k-Ho-Qlp"/>
+                            <constraint firstAttribute="trailing" secondItem="qC6-Vh-x2I" secondAttribute="trailing" constant="8" id="goH-OM-vcT"/>
+                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" constant="8" id="u9D-RP-oaP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gas stations" id="9ce-Xf-c2b">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="filter" id="Opw-5g-ISG"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="stationsTable" destination="c71-BW-8jG" id="Z0A-1p-BxK"/>
                     </connections>
@@ -212,7 +239,6 @@ Al Barsha South - Dubai, UAE</string>
     <resources>
         <image name="car" width="33" height="19"/>
         <image name="enoc" width="121" height="121"/>
-        <image name="filter" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.28661888837814331" green="0.78349769115447998" blue="0.21858000755310059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
