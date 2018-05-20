@@ -13,6 +13,7 @@ import Viperit
 final class GasStationsPresenter: Presenter {
     
     var petrolType: PetrolType = .super98
+    var filter: SortingClosure = .byPrice
     
     override func viewIsAboutToAppear() {
         loadContent()
@@ -22,12 +23,20 @@ final class GasStationsPresenter: Presenter {
 // MARK: - GasStationsPresenter API
 extension GasStationsPresenter: GasStationsPresenterApi {    
     func loadContent() {
-        view.setDrivers(petrolType: petrolType)
+        view.setDrivers(petrolType: petrolType, filter: filter)
     }
     
-    func switchPetrolType(petrolType: PetrolType) {
-        self.petrolType = petrolType
-        view.setDrivers(petrolType: petrolType)
+    func reloadTableData(petrolType: PetrolType?, filter: SortingClosure? = nil) {
+                
+        if let filter = filter {
+            self.filter = filter
+        }
+        
+        if let petrolType = petrolType {
+            self.petrolType = petrolType
+        }
+        
+        view.setDrivers(petrolType: self.petrolType, filter: self.filter)
     }
 }
 

@@ -17,12 +17,13 @@ protocol GasStationsRouterApi: RouterProtocol {
 
 //MARK: - GasStationsView API
 protocol GasStationsViewApi: UserInterfaceProtocol {
-    func setDrivers(petrolType: PetrolType)
+    func setDrivers(petrolType: PetrolType, filter: SortingClosure)
 }
 
 //MARK: - GasStationsPresenter API
 protocol GasStationsPresenterApi: PresenterProtocol {
-    func switchPetrolType(petrolType: PetrolType)
+    var filter: SortingClosure { get }
+    func reloadTableData(petrolType: PetrolType?, filter: SortingClosure?)
 }
 
 //MARK: - GasStationsInteractor API

@@ -87,7 +87,9 @@ extension GasStationCellData {
         address = info.address
         price = "\(info.price[petrol] ?? 0)"
         hours = info.hours
-        eTA = "5 min"
+        
+        /// We just round up to nearest minute, since few second wouldn't change a lot. Convert into Int to remove those decimal places.
+        eTA = "\(Int((info.eTA/60.0).rounded(.up))) min"
         favourite = info.favourite
     }
 }

@@ -16,6 +16,18 @@ final class GasStationsView: UserInterface {
     
     /// Get this from user defaults?
     @IBOutlet private var stationsTable: UITableView!
+    @IBOutlet weak var priceButton: BorderedSquareButton!
+    @IBOutlet weak var distanceButton: BorderedSquareButton!
+    
+    
+    @IBAction func switchedFilter(_ sender: BorderedSquareButton) {
+        if sender == self.priceButton && presenter.filter != .byPrice {
+            presenter.reloadTableData(petrolType: nil,  filter: .byPrice)
+        }
+        else if sender == self.distanceButton && presenter.filter != .byDistance {
+            presenter.reloadTableData(petrolType: nil,  filter: .byDistance)
+        }
+    }
     
     @IBAction func filterSheet(_ sender: Any) {
         let petrolTypeActionSheet = UIAlertController(title: "Petrol type", message: "Choose petrol type bellow", preferredStyle: .actionSheet)
@@ -26,7 +38,7 @@ final class GasStationsView: UserInterface {
             let action = UIAlertAction(title: petrolType.fuelName(), style: .default) { [unowned self]
                 (action) in
                 self.gasTypeLabel.text = petrolType.fuelName()
-                self.presenter.switchPetrolType(petrolType: petrolType)
+                self.presenter.reloadTableData(petrolType: petrolType, filter: nil)
             }
             petrolTypeActionSheet.addAction(action)
         }
@@ -43,8 +55,19 @@ final class GasStationsView: UserInterface {
 
 //MARK: - GasStationsView API
 extension GasStationsView: GasStationsViewApi {    
-    func setDrivers(petrolType: PetrolType) {
-        let cellDataDriver = displayData.getStations(petrol: petrolType, sortingClosure: .byPrice)
+    func setDrivers(petrolType: PetrolType, filter: SortingClosure) {
+        
+        switch filter {
+        case .byDistance:
+            distanceButton.layer.borderColor = UIColor.red.cgColor
+            priceButton.layer.borderColor = UIColor.black.cgColor
+        case .byPrice:
+            distanceButton.layer.borderColor = UIColor.black.cgColor
+            priceButton.layer.borderColor = UIColor.red.cgColor
+        }
+        
+        let cellDataDriver = displayData.getStations(petrol: petrolType, sortingClosure: filter)
+        
         cellDataDriver.drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
         { (_, data: GasStationCellData, cell) in
             cell.setCellData(stationData: data)

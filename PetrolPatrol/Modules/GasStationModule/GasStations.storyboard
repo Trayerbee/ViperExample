@@ -250,6 +250,9 @@ Al Barsha South - Dubai, UAE</string>
                                         <state key="normal" title="PRICE">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="switchedFilter:" destination="xqD-av-Raz" eventType="touchUpInside" id="cGy-jd-8kF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="082-KZ-zb7" customClass="BorderedSquareButton" customModule="PetrolPatrol" customModuleProvider="target">
                                         <rect key="frame" x="192" y="13.5" width="143" height="37"/>
@@ -261,6 +264,9 @@ Al Barsha South - Dubai, UAE</string>
                                         <state key="normal" title="DISTANCE">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="switchedFilter:" destination="xqD-av-Raz" eventType="touchUpInside" id="Dvi-oq-cko"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -283,7 +289,9 @@ Al Barsha South - Dubai, UAE</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="distanceButton" destination="082-KZ-zb7" id="fud-fh-DI5"/>
                         <outlet property="gasTypeLabel" destination="eR6-nn-zM2" id="iPA-EA-Gwa"/>
+                        <outlet property="priceButton" destination="7aS-4f-hjs" id="TrF-09-s4p"/>
                         <outlet property="stationsTable" destination="c71-BW-8jG" id="Z0A-1p-BxK"/>
                     </connections>
                 </viewController>
