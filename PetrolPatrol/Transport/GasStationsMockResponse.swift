@@ -18,16 +18,16 @@ extension GasStationsResponse {
     // This is a mock up, in real app we will call API here.
     static func fetch() -> Observable<GasStationsResponse> {
         return Observable<[GasStationInfo]>.just(
-            [GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .chevron, address: "Baraha St - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .eppco, address: "Sheikh Zd Rd, E 11, after Dnata - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .chevron, address: "1 12 St - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .eppco, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .chevron, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
-             GasStationInfo(brand: .eppco, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false),
+            [GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 5),
+             GasStationInfo(brand: .chevron, address: "Baraha St - Dubai - United Arab Emirates", price:[.super98: 2.50, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 7),
+             GasStationInfo(brand: .eppco, address: "Sheikh Zd Rd, E 11, after Dnata - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 4),
+             GasStationInfo(brand: .chevron, address: "1 12 St - Dubai - United Arab Emirates", price:[.super98: 2.39, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 10),
+             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.10, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 12),
+             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.49, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 10),
+             GasStationInfo(brand: .eppco, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.59, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 3),
+             GasStationInfo(brand: .chevron, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.71, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 2),
+             GasStationInfo(brand: .enoc, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 2.60, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 1),
+             GasStationInfo(brand: .eppco, address: "Shk Mohd Bin Zd Rd, E 311, Int Media Production Zone - Dubai - United Arab Emirates", price:[.super98: 1.99, .special95: 2.37, .ePlus: 2.30, .diesel: 2.56, .premiumDiesel: 2.60], hours: "Today/ 24 hours", favourite: false, eTA: 30),
 
              ])
             .map { GasStationsResponse(stations: $0) }
@@ -68,6 +68,7 @@ struct GasStationInfo {
     let price: [PetrolType: Double]
     let hours: String
     let favourite: Bool
+    let eTA: TimeInterval
 }
 
 enum PetrolType {

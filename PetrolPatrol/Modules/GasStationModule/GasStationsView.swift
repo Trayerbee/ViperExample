@@ -44,7 +44,7 @@ final class GasStationsView: UserInterface {
 //MARK: - GasStationsView API
 extension GasStationsView: GasStationsViewApi {    
     func setDrivers(petrolType: PetrolType) {
-        let cellDataDriver = displayData.getStations(petrol: petrolType)
+        let cellDataDriver = displayData.getStations(petrol: petrolType, sortingClosure: .byPrice)
         cellDataDriver.drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
         { (_, data: GasStationCellData, cell) in
             cell.setCellData(stationData: data)
