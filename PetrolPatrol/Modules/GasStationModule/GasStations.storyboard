@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,8 +30,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-xl-IyM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VM-rO-HfF">
+                                        <rect key="frame" x="244" y="14" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="BIN-IW-2Fy"/>
+                                            <constraint firstAttribute="height" constant="36" id="Q4o-bC-aQv"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrowDown">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="filterSheet:" destination="xqD-av-Raz" eventType="touchUpInside" id="OuS-za-Peh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super 98" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR6-nn-zM2">
+                                        <rect key="frame" x="140.5" y="19" width="95.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwo-uq-yE5">
+                                        <rect key="frame" x="8" y="14" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="UYa-LK-8E9"/>
+                                            <constraint firstAttribute="height" constant="36" id="ss3-B3-Ofk"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showMenu:" destination="xqD-av-Raz" eventType="touchUpInside" id="zVU-da-289"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1uQ-qi-ApH"/>
+                                    <constraint firstItem="eR6-nn-zM2" firstAttribute="centerY" secondItem="2ka-xl-IyM" secondAttribute="centerY" id="2ZJ-Rl-mz8"/>
+                                    <constraint firstItem="4VM-rO-HfF" firstAttribute="leading" secondItem="eR6-nn-zM2" secondAttribute="trailing" constant="8" id="DTn-5z-0LR"/>
+                                    <constraint firstItem="4VM-rO-HfF" firstAttribute="centerY" secondItem="2ka-xl-IyM" secondAttribute="centerY" id="Gmy-rw-6cr"/>
+                                    <constraint firstItem="uwo-uq-yE5" firstAttribute="leading" secondItem="2ka-xl-IyM" secondAttribute="leading" constant="8" id="NgV-gY-yjn"/>
+                                    <constraint firstItem="uwo-uq-yE5" firstAttribute="centerY" secondItem="2ka-xl-IyM" secondAttribute="centerY" id="f3u-fm-rTn"/>
+                                    <constraint firstItem="eR6-nn-zM2" firstAttribute="centerX" secondItem="2ka-xl-IyM" secondAttribute="centerX" id="n5W-f9-1M2"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c71-BW-8jG">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="159" width="375" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" rowHeight="90" id="rkZ-es-cW8" customClass="GasStationTableViewCell" customModule="PetrolPatrol" customModuleProvider="target">
@@ -187,13 +237,14 @@ Al Barsha South - Dubai, UAE</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-Vh-x2I">
-                                <rect key="frame" x="8" y="8" width="359" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-Vh-x2I">
+                                <rect key="frame" x="20" y="64" width="335" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-4f-hjs" customClass="BorderedSquareButton" customModule="PetrolPatrol" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="13.5" width="167.5" height="37"/>
+                                        <rect key="frame" x="0.0" y="13.5" width="143" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="Y6o-Kn-lrl"/>
+                                            <constraint firstAttribute="width" constant="143" id="bOu-BC-vlW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="PRICE">
@@ -201,8 +252,9 @@ Al Barsha South - Dubai, UAE</string>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="082-KZ-zb7" customClass="BorderedSquareButton" customModule="PetrolPatrol" customModuleProvider="target">
-                                        <rect key="frame" x="191.5" y="13.5" width="167.5" height="37"/>
+                                        <rect key="frame" x="192" y="13.5" width="143" height="37"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="CA7-9M-tAN"/>
                                             <constraint firstAttribute="height" constant="37" id="xuN-fY-YVl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -218,27 +270,33 @@ Al Barsha South - Dubai, UAE</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2ka-xl-IyM" firstAttribute="top" secondItem="kgt-o0-aP8" secondAttribute="top" id="12H-Dw-NEo"/>
+                            <constraint firstItem="2ka-xl-IyM" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="1Qi-Sp-iRq"/>
                             <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="c71-BW-8jG" secondAttribute="bottom" id="3hD-8h-OwP"/>
                             <constraint firstItem="c71-BW-8jG" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="E42-7J-WTP"/>
+                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="top" secondItem="2ka-xl-IyM" secondAttribute="bottom" id="QoR-Ru-ltl"/>
                             <constraint firstAttribute="trailing" secondItem="c71-BW-8jG" secondAttribute="trailing" id="X4E-NV-6eQ"/>
-                            <constraint firstItem="c71-BW-8jG" firstAttribute="top" secondItem="qC6-Vh-x2I" secondAttribute="bottom" constant="8" id="enh-nO-JQT"/>
-                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="top" secondItem="kgt-o0-aP8" secondAttribute="top" constant="8" id="f6k-Ho-Qlp"/>
-                            <constraint firstAttribute="trailing" secondItem="qC6-Vh-x2I" secondAttribute="trailing" constant="8" id="goH-OM-vcT"/>
-                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" constant="8" id="u9D-RP-oaP"/>
+                            <constraint firstItem="c71-BW-8jG" firstAttribute="top" secondItem="qC6-Vh-x2I" secondAttribute="bottom" constant="31" id="enh-nO-JQT"/>
+                            <constraint firstAttribute="trailing" secondItem="qC6-Vh-x2I" secondAttribute="trailing" constant="20" id="goH-OM-vcT"/>
+                            <constraint firstAttribute="trailing" secondItem="2ka-xl-IyM" secondAttribute="trailing" id="mXW-Uy-udO"/>
+                            <constraint firstItem="qC6-Vh-x2I" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" constant="20" id="u9D-RP-oaP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gasTypeLabel" destination="eR6-nn-zM2" id="iPA-EA-Gwa"/>
                         <outlet property="stationsTable" destination="c71-BW-8jG" id="Z0A-1p-BxK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293.60000000000002" y="355.7721139430285"/>
+            <point key="canvasLocation" x="-98" y="364"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowDown" width="48" height="48"/>
         <image name="car" width="33" height="19"/>
         <image name="enoc" width="121" height="121"/>
+        <image name="menu" width="48" height="48"/>
     </resources>
     <color key="tintColor" red="0.28661888837814331" green="0.78349769115447998" blue="0.21858000755310059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

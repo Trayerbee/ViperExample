@@ -9,6 +9,7 @@
 // Google maps API Key AIzaSyA3YSQOTWM2PxSYDrmyX-bNHFX8pofRyN0
 
 import UIKit
+import GooglePlaces
 import GoogleMaps
 import Viperit
 import CoreLocation
@@ -21,8 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        /// Google maps init with API Key (API key from example project for xxbetrayerxx@gmail.com locked on this app bundle).
+        /// Google maps and places init with API Key (API key from example project for xxbetrayerxx@gmail.com locked on this app bundle).
         GMSServices.provideAPIKey("AIzaSyA3YSQOTWM2PxSYDrmyX-bNHFX8pofRyN0")
+        GMSPlacesClient.provideAPIKey("AIzaSyAg7g4eW2DDHJd5FCwH9xbRY7f2diJDgiQ")
+
         window = UIWindow(frame: UIScreen.main.bounds)
         let module = AppModules.gasStations.build()
         module.router.show(inWindow: window)

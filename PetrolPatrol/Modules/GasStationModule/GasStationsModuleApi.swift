@@ -17,12 +17,12 @@ protocol GasStationsRouterApi: RouterProtocol {
 
 //MARK: - GasStationsView API
 protocol GasStationsViewApi: UserInterfaceProtocol {
-    func setDrivers()
+    func setDrivers(petrolType: PetrolType)
 }
 
 //MARK: - GasStationsPresenter API
 protocol GasStationsPresenterApi: PresenterProtocol {
-    var petrolType: PetrolType { get set }
+    func switchPetrolType(petrolType: PetrolType)
 }
 
 //MARK: - GasStationsInteractor API

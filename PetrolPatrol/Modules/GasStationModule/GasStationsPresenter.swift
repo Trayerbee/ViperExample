@@ -12,28 +12,22 @@ import Viperit
 // MARK: - GasStationsPresenter Class
 final class GasStationsPresenter: Presenter {
     
+    var petrolType: PetrolType = .super98
+    
     override func viewIsAboutToAppear() {
         loadContent()
     }
 }
 
 // MARK: - GasStationsPresenter API
-extension GasStationsPresenter: GasStationsPresenterApi {
-    var petrolType: PetrolType {
-        get {
-            return .super98
-        }
-        set {
-            
-        }
-    }
-    
+extension GasStationsPresenter: GasStationsPresenterApi {    
     func loadContent() {
-        view.setDrivers()
+        view.setDrivers(petrolType: petrolType)
     }
     
-    func changePetrolType(type: PetrolType){
-        
+    func switchPetrolType(petrolType: PetrolType) {
+        self.petrolType = petrolType
+        view.setDrivers(petrolType: petrolType)
     }
 }
 

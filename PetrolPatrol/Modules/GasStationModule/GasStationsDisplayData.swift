@@ -14,15 +14,25 @@ import RxCocoa
 
 // MARK: - GasStationsDisplayData class
 final class GasStationsDisplayData: DisplayData {
-    let stations: Observable<[GasStationCellData]>
-    let collectionDataDriver: Driver<[GasStationCellData]>
+//    let stations: Observable<[GasStationCellData]>
+//    let collectionDataDriver: Driver<[GasStationCellData]>
+    
+    func getStations(petrol: PetrolType = .super98) -> Driver<[GasStationCellData]> {
+        return GasStationsResponse
+            .fetch()
+            .map {
+                (response) -> [GasStationCellData]  in
+            return GasStationCellData.cellDataFromInfoArray(stations: response.stations, petrolType: petrol) }
+            .asDriver(onErrorJustReturn: [])
+
+    }
     
     required init() {
-        stations = GasStationsResponse.fetch().map { (response) -> [GasStationCellData]  in
-            return GasStationCellData.dataFromInfoArray(array: response.stations)
-        }
-        
-        collectionDataDriver = stations.asDriver(onErrorJustReturn: [])
+//        stations = GasStationsResponse.fetch().map { (response) -> [GasStationCellData]  in
+//            return GasStationCellData.cellDataFromInfoArray(array: response.stations, petrolType: .super98)
+//        }
+//
+//        collectionDataDriver = stations.asDriver(onErrorJustReturn: [])
     }
 }
 
@@ -38,14 +48,14 @@ struct GasStationCellData {
 
 extension GasStationCellData {
     
-    static func dataFromInfoArray(array: [GasStationInfo]) -> [GasStationCellData] {
-        var dataArray: [GasStationCellData] = []
+    static func cellDataFromInfoArray(stations: [GasStationInfo], petrolType: PetrolType) -> [GasStationCellData] {
+        var stationsCellDataList: [GasStationCellData] = []
         
-        for stationInfo in array {
-            dataArray.append(GasStationCellData(info: stationInfo, petrol: .super98))
+        for stationInfo in stations {
+            stationsCellDataList.append(GasStationCellData(info: stationInfo, petrol: petrolType))
         }
         
-        return dataArray
+        return stationsCellDataList
     }
     
     init(info: GasStationInfo, petrol: PetrolType) {
