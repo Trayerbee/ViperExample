@@ -16,6 +16,10 @@
 		40270A9B20B19A1D004F509A /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270A9620B19A1C004F509A /* Viperit.framework */; };
 		40270A9C20B19A1D004F509A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270A9720B19A1C004F509A /* RealmSwift.framework */; };
 		40270A9D20B19A1D004F509A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270A9820B19A1C004F509A /* RxCocoa.framework */; };
+		40270A9F20B221E8004F509A /* DirectionsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40270A9E20B221E8004F509A /* DirectionsAPIResponse.swift */; };
+		40270AA320B224C8004F509A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA020B224C8004F509A /* Alamofire.framework */; };
+		40270AA420B224C8004F509A /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA120B224C8004F509A /* Freddy.framework */; };
+		40270AA520B224C8004F509A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA220B224C8004F509A /* RxAlamofire.framework */; };
 		407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */; };
 		407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */; };
 		407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759720AEEF49007B0AF1 /* GoogleMaps.framework */; };
@@ -91,6 +95,10 @@
 		40270A9620B19A1C004F509A /* Viperit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Viperit.framework; path = Carthage/Build/iOS/Viperit.framework; sourceTree = SOURCE_ROOT; };
 		40270A9720B19A1C004F509A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		40270A9820B19A1C004F509A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		40270A9E20B221E8004F509A /* DirectionsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsAPIResponse.swift; sourceTree = "<group>"; };
+		40270AA020B224C8004F509A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		40270AA120B224C8004F509A /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = SOURCE_ROOT; };
+		40270AA220B224C8004F509A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = SOURCE_ROOT; };
 		407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
 		407D759720AEEF49007B0AF1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40270A9920B19A1D004F509A /* Realm.framework in Frameworks */,
+				40270AA320B224C8004F509A /* Alamofire.framework in Frameworks */,
 				407D75A620AEF081007B0AF1 /* CoreLocation.framework in Frameworks */,
 				40270A9C20B19A1D004F509A /* RealmSwift.framework in Frameworks */,
 				407D75B820AEF0CE007B0AF1 /* UIKit.framework in Frameworks */,
@@ -159,6 +168,7 @@
 				407D75B220AEF0B7007B0AF1 /* OpenGLES.framework in Frameworks */,
 				407D75B020AEF0AD007B0AF1 /* libz.tbd in Frameworks */,
 				40270A7E20B18131004F509A /* GooglePlaces.framework in Frameworks */,
+				40270AA420B224C8004F509A /* Freddy.framework in Frameworks */,
 				407D75AE20AEF0A3007B0AF1 /* libc++.tbd in Frameworks */,
 				407D75AC20AEF096007B0AF1 /* ImageIO.framework in Frameworks */,
 				407D75AA20AEF08F007B0AF1 /* GLKit.framework in Frameworks */,
@@ -169,6 +179,7 @@
 				407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */,
 				40270A9B20B19A1D004F509A /* Viperit.framework in Frameworks */,
 				407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */,
+				40270AA520B224C8004F509A /* RxAlamofire.framework in Frameworks */,
 				407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */,
 				40270A9D20B19A1D004F509A /* RxCocoa.framework in Frameworks */,
 				40270A9A20B19A1D004F509A /* RxSwift.framework in Frameworks */,
@@ -195,6 +206,9 @@
 		4014234420AE0E5E00CB5A19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40270AA020B224C8004F509A /* Alamofire.framework */,
+				40270AA120B224C8004F509A /* Freddy.framework */,
+				40270AA220B224C8004F509A /* RxAlamofire.framework */,
 				40270A9420B19A1C004F509A /* Realm.framework */,
 				40270A9720B19A1C004F509A /* RealmSwift.framework */,
 				40270A9820B19A1C004F509A /* RxCocoa.framework */,
@@ -222,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				40270A7820B1345D004F509A /* GasStationsMockResponse.swift */,
+				40270A9E20B221E8004F509A /* DirectionsAPIResponse.swift */,
 			);
 			path = Transport;
 			sourceTree = "<group>";
@@ -498,6 +513,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Viperit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Freddy.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -506,6 +524,9 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Viperit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Freddy.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -530,6 +551,7 @@
 				40270A7C20B1583C004F509A /* BorderedSquareButton.swift in Sources */,
 				407D75C620AF4BB2007B0AF1 /* GasStationsView.swift in Sources */,
 				4094BFBE20B070FD001E41B9 /* StyleGuide.swift in Sources */,
+				40270A9F20B221E8004F509A /* DirectionsAPIResponse.swift in Sources */,
 				407D75EE20AF5785007B0AF1 /* MapModuleApi.swift in Sources */,
 				4094BFBB20B05FFD001E41B9 /* GasStationTableViewCell.swift in Sources */,
 				407D75C420AF4BB2007B0AF1 /* GasStationsModuleApi.swift in Sources */,

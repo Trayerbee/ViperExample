@@ -7,17 +7,26 @@
 //
 
 import Viperit
+import UIKit.UIWindow
+import CoreLocation.CLLocation
 
 //MARK: - MapRouter API
 protocol MapRouterApi: RouterProtocol {
+    func showMapForAddress(from: UserInterface, address: String)
+    func goBack()
 }
 
 //MARK: - MapView API
 protocol MapViewApi: UserInterfaceProtocol {
+    func showMap(to address: String, location: CLLocationCoordinate2D?)
 }
 
 //MARK: - MapPresenter API
 protocol MapPresenterApi: PresenterProtocol {
+    var address: String { get }
+    func set(address: String)
+    func getDirections(to: CLLocationCoordinate2D?)
+    func goBack()
 }
 
 //MARK: - MapInteractor API

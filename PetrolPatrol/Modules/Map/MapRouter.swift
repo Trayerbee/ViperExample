@@ -6,15 +6,23 @@
 //Copyright © 2018 Ilyas-Karshigabekov. All rights reserved.
 //
 
-import Foundation
+import UIKit.UIWindow
 import Viperit
 
 // MARK: - MapRouter class
 final class MapRouter: Router {
+    func goBack() {
+        let module = AppModules.gasStations.build()
+        module.router.show(from: _view)
+    }
 }
 
 // MARK: - MapRouter API
 extension MapRouter: MapRouterApi {
+    func showMapForAddress(from view: UserInterface, address: String) {
+        self.show(from: view)
+        presenter.set(address: address)
+    }
 }
 
 // MARK: - Map Viper Components

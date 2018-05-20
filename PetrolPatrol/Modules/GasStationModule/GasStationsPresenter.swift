@@ -24,6 +24,7 @@ final class GasStationsPresenter: Presenter {
 extension GasStationsPresenter: GasStationsPresenterApi {    
     func loadContent() {
         view.setDrivers(petrolType: petrolType, filter: filter)
+        view.setTableSideEffect()
     }
     
     func reloadTableData(petrolType: PetrolType?, filter: SortingClosure? = nil) {
@@ -37,6 +38,10 @@ extension GasStationsPresenter: GasStationsPresenterApi {
         }
         
         view.setDrivers(petrolType: self.petrolType, filter: self.filter)
+    }
+    
+    func loadMapFor(address: String) {
+        router.showMap(address: address)
     }
 }
 

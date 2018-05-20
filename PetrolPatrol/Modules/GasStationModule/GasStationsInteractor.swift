@@ -11,6 +11,9 @@ import Viperit
 
 // MARK: - GasStationsInteractor Class
 final class GasStationsInteractor: Interactor {
+    func test() {
+        
+    }
 }
 
 // MARK: - GasStationsInteractor API

@@ -1,3 +1,6 @@
+github "Alamofire/Alamofire" "4.7.2"
 github "ReactiveX/RxSwift" "4.1.2"
+github "RxSwiftCommunity/RxAlamofire" "872f8fabde6c914736bcb2766cce9770e268de4b"
+github "bignerdranch/Freddy" "3.0.3"
 github "ferranabello/Viperit" "1.1.0"
 github "realm/realm-cocoa" "v3.5.0"

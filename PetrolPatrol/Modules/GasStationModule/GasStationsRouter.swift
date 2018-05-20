@@ -6,6 +6,7 @@
 //Copyright © 2018 Ilyas-Karshigabekov. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import Viperit
 
@@ -15,6 +16,11 @@ final class GasStationsRouter: Router {
 
 // MARK: - GasStationsRouter API
 extension GasStationsRouter: GasStationsRouterApi {
+    func showMap(address: String) {
+        let module = AppModules.map.build()
+        let mapRouter =  module.router as! MapRouterApi
+        mapRouter.showMapForAddress(from: _view, address: address)
+    }
 }
 
 // MARK: - GasStations Viper Components

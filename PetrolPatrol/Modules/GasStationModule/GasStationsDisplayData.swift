@@ -13,10 +13,7 @@ import RxSwift
 import RxCocoa
 
 // MARK: - GasStationsDisplayData class
-final class GasStationsDisplayData: DisplayData {
-//    let stations: Observable<[GasStationCellData]>
-//    let collectionDataDriver: Driver<[GasStationCellData]>
-    
+final class GasStationsDisplayData: DisplayData {    
     func getStations(petrol: PetrolType = .super98, sortingClosure: SortingClosure) -> Driver<[GasStationCellData]> {
         return GasStationsResponse
             .fetch()
@@ -25,14 +22,6 @@ final class GasStationsDisplayData: DisplayData {
             return GasStationCellData.cellDataFromInfoArray(stations: response.stations.sorted(by: sortingClosure.getSortingClosure(petrol: petrol)), petrolType: petrol) }
             .asDriver(onErrorJustReturn: [])
 
-    }
-    
-    required init() {
-//        stations = GasStationsResponse.fetch().map { (response) -> [GasStationCellData]  in
-//            return GasStationCellData.cellDataFromInfoArray(array: response.stations, petrolType: .super98)
-//        }
-//
-//        collectionDataDriver = stations.asDriver(onErrorJustReturn: [])
     }
 }
 

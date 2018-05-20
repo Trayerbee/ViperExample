@@ -12,7 +12,7 @@ import RxCocoa
 import RxSwift
 
 //MARK: GasStationsView Class
-final class GasStationsView: UserInterface {
+final class GasStationsView: UserInterface, UITableViewDelegate {
     
     /// Get this from user defaults?
     @IBOutlet private var stationsTable: UITableView!
@@ -57,6 +57,10 @@ final class GasStationsView: UserInterface {
 extension GasStationsView: GasStationsViewApi {    
     func setDrivers(petrolType: PetrolType, filter: SortingClosure) {
         
+        stationsTable.rx
+            .setDelegate(self)
+            .disposed(by: bag)
+        
         switch filter {
         case .byDistance:
             distanceButton.layer.borderColor = UIColor.red.cgColor
@@ -72,6 +76,17 @@ extension GasStationsView: GasStationsViewApi {
         { (_, data: GasStationCellData, cell) in
             cell.setCellData(stationData: data)
             }.disposed(by: bag)
+    }
+    
+    func setTableSideEffect() {
+        stationsTable.rx
+            .modelSelected(GasStationCellData.self)
+            .debug("Picked a row")
+            .subscribe(onNext: { [unowned self]
+                (cellData) in
+                self.presenter.loadMapFor(address: cellData.address)
+            })
+            .disposed(by: bag)
     }
 }
 

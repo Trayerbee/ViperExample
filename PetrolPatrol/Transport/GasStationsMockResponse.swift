@@ -50,6 +50,8 @@ enum GasBrand {
         }
     }
     
+    
+    /// In real app with transport layer these would be only links or names of logos, but for this small app we can cut a corner here.
     func logo() -> UIImage {
         switch self {
         case .chevron:

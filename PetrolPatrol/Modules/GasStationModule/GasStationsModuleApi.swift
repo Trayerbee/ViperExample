@@ -12,18 +12,20 @@ import RxSwift
 
 //MARK: - GasStationsRouter API
 protocol GasStationsRouterApi: RouterProtocol {
-    
+    func showMap(address: String)
 }
 
 //MARK: - GasStationsView API
 protocol GasStationsViewApi: UserInterfaceProtocol {
     func setDrivers(petrolType: PetrolType, filter: SortingClosure)
+    func setTableSideEffect()
 }
 
 //MARK: - GasStationsPresenter API
 protocol GasStationsPresenterApi: PresenterProtocol {
     var filter: SortingClosure { get }
     func reloadTableData(petrolType: PetrolType?, filter: SortingClosure?)
+    func loadMapFor(address: String)
 }
 
 //MARK: - GasStationsInteractor API
