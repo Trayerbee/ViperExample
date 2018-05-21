@@ -21,23 +21,24 @@ final class GasStationsPresenter: Presenter {
 }
 
 // MARK: - GasStationsPresenter API
-extension GasStationsPresenter: GasStationsPresenterApi {    
+extension GasStationsPresenter: GasStationsPresenterApi {
+    
     func loadContent() {
-        view.setDrivers(petrolType: petrolType, filter: filter)
+        view.setDrivers(stations: interactor.loadGasStations(sorted: filter, petrol: petrolType), petrol: petrolType, filter: filter)
         view.setTableSideEffect()
     }
     
-    func reloadTableData(petrolType: PetrolType?, filter: SortingClosure? = nil) {
-                
-        if let filter = filter {
-            self.filter = filter
+    func reloadTableData(petrol: PetrolType?, filter closure: SortingClosure?) {
+
+        if let closure = closure {
+            filter = closure
         }
         
-        if let petrolType = petrolType {
-            self.petrolType = petrolType
+        if let petrol = petrol {
+            petrolType = petrol
         }
         
-        view.setDrivers(petrolType: self.petrolType, filter: self.filter)
+        view.setDrivers(stations: interactor.loadGasStations(sorted: filter, petrol: petrolType), petrol: petrolType, filter: filter)
     }
     
     func loadMapFor(address: String) {

@@ -22,10 +22,10 @@ final class GasStationsView: UserInterface, UITableViewDelegate {
     
     @IBAction func switchedFilter(_ sender: BorderedSquareButton) {
         if sender == self.priceButton && presenter.filter != .byPrice {
-            presenter.reloadTableData(petrolType: nil,  filter: .byPrice)
+            presenter.reloadTableData(petrol: nil, filter: .byPrice)
         }
         else if sender == self.distanceButton && presenter.filter != .byDistance {
-            presenter.reloadTableData(petrolType: nil,  filter: .byDistance)
+            presenter.reloadTableData(petrol: nil, filter: .byDistance)
         }
     }
     
@@ -38,7 +38,7 @@ final class GasStationsView: UserInterface, UITableViewDelegate {
             let action = UIAlertAction(title: petrolType.fuelName(), style: .default) { [unowned self]
                 (action) in
                 self.gasTypeLabel.text = petrolType.fuelName()
-                self.presenter.reloadTableData(petrolType: petrolType, filter: nil)
+                self.presenter.reloadTableData(petrol: petrolType, filter: nil)
             }
             petrolTypeActionSheet.addAction(action)
         }
@@ -54,8 +54,10 @@ final class GasStationsView: UserInterface, UITableViewDelegate {
 }
 
 //MARK: - GasStationsView API
-extension GasStationsView: GasStationsViewApi {    
-    func setDrivers(petrolType: PetrolType, filter: SortingClosure) {
+extension GasStationsView: GasStationsViewApi {
+    
+    /// We pass filter here for view to update selected filter border color
+    func setDrivers(stations: Observable<[GasStationInfo]>, petrol: PetrolType, filter: SortingClosure) {
         
         stationsTable.rx
             .setDelegate(self)
@@ -70,11 +72,10 @@ extension GasStationsView: GasStationsViewApi {
             priceButton.layer.borderColor = UIColor.red.cgColor
         }
         
-        let cellDataDriver = displayData.getStations(petrol: petrolType, sortingClosure: filter)
-        
-        cellDataDriver.drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
-        { (_, data: GasStationCellData, cell) in
-            cell.setCellData(stationData: data)
+        displayData.getCellDataStations(from: stations, for: petrol)
+            .drive(stationsTable.rx.items(cellIdentifier: "StationCell", cellType: GasStationTableViewCell.self))
+            { (_, data: GasStationCellData, cell) in
+                cell.setCellData(stationData: data)
             }.disposed(by: bag)
     }
     

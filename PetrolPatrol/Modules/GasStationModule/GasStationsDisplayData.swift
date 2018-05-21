@@ -14,37 +14,13 @@ import RxCocoa
 
 // MARK: - GasStationsDisplayData class
 final class GasStationsDisplayData: DisplayData {    
-    func getStations(petrol: PetrolType = .super98, sortingClosure: SortingClosure) -> Driver<[GasStationCellData]> {
-        return GasStationsResponse
-            .fetch()
-            .map {
-                (response) -> [GasStationCellData]  in
-            return GasStationCellData.cellDataFromInfoArray(stations: response.stations.sorted(by: sortingClosure.getSortingClosure(petrol: petrol)), petrolType: petrol) }
+    func getCellDataStations(from stations: Observable<[GasStationInfo]>, for petrol: PetrolType) -> Driver<[GasStationCellData]> {
+        return stations.map {
+                (stations) -> [GasStationCellData]  in
+            return GasStationCellData.cellDataFromInfoArray(stations: stations, petrolType: petrol)
+            
+            }
             .asDriver(onErrorJustReturn: [])
-
-    }
-}
-
-enum SortingClosure {
-    case byPrice
-    case byDistance
-    
-    func getSortingClosure(petrol: PetrolType) -> ((GasStationInfo, GasStationInfo) -> Bool) {
-        switch self {
-        case .byPrice:
-            return {
-                (firstCell: GasStationInfo, secondCell: GasStationInfo) -> Bool in
-                guard let firstPrice = firstCell.price[petrol], let secondPrice = secondCell.price[petrol] else {
-                    return true
-                }
-                return firstPrice < secondPrice
-            }
-        case .byDistance:
-            return {
-                (firstCell: GasStationInfo, secondCell: GasStationInfo) -> Bool in
-                return firstCell.eTA < secondCell.eTA
-            }
-        }
     }
 }
 

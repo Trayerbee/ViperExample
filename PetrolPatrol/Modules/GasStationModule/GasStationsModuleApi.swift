@@ -17,18 +17,18 @@ protocol GasStationsRouterApi: RouterProtocol {
 
 //MARK: - GasStationsView API
 protocol GasStationsViewApi: UserInterfaceProtocol {
-    func setDrivers(petrolType: PetrolType, filter: SortingClosure)
+    func setDrivers(stations: Observable<[GasStationInfo]>, petrol: PetrolType, filter: SortingClosure)
     func setTableSideEffect()
 }
 
 //MARK: - GasStationsPresenter API
 protocol GasStationsPresenterApi: PresenterProtocol {
     var filter: SortingClosure { get }
-    func reloadTableData(petrolType: PetrolType?, filter: SortingClosure?)
+    func reloadTableData(petrol: PetrolType?, filter: SortingClosure?)
     func loadMapFor(address: String)
 }
 
 //MARK: - GasStationsInteractor API
 protocol GasStationsInteractorApi: InteractorProtocol {
-    
+    func loadGasStations(sorted: SortingClosure, petrol: PetrolType) -> Observable<[GasStationInfo]>
 }
