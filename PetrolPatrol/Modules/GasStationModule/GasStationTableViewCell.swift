@@ -14,7 +14,7 @@ class GasStationTableViewCell: UITableViewCell {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var nameAndETA: UILabel!
     @IBOutlet weak var address: UILabel!
-//    @IBOutlet weak var openHours: UILabel!
+//    @IBOutlet weak var openHours: UILabel!  for the sake of this example all gas stations are working 24/7 😉
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var currency: UILabel!
     
@@ -23,7 +23,7 @@ class GasStationTableViewCell: UITableViewCell {
         logo.image = stationData.logo
         
         // Set title of the cell brand + ETA, half of it is green.
-        var mainAttributedText: NSMutableAttributedString = NSMutableAttributedString(string: "\(stationData.brand) / \(stationData.eTA)", attributes: StyleGuide.blackCellTitleAttributes())
+        let mainAttributedText: NSMutableAttributedString = NSMutableAttributedString(string: "\(stationData.brand) / \(stationData.eTA)", attributes: StyleGuide.blackCellTitleAttributes())
         
         mainAttributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: StyleGuide.greenColor(), range: NSRange(location: "\(stationData.brand) / ".count, length: stationData.eTA.count))
         
@@ -33,10 +33,7 @@ class GasStationTableViewCell: UITableViewCell {
         
         price.text = stationData.price
         
-        // This is hardcoded, but I am not sure if it should be changable at all.
-        currency.text = "AED"
-        
-        // For the sake of this example all gas stations are working 24/7 😉
+        currency.text = Locale.current.currencyCode
     }
 }
 

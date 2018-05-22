@@ -30,13 +30,16 @@ final class MapView: UserInterface {
 
 //MARK: - MapView API
 extension MapView: MapViewApi {
+    
     func showRoute(with points: Observable<String>) {
         displayData.drivibleRoute(from: points)
             .drive(onNext: { (polyline, bounds) in
-                self.mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                self.mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding  : 30.0))
                 polyline.map = self.mapView
             }).disposed(by: bag)
     }
+    
+    //This just shows map and waits till location manager gets you an actual location, afterwards it's fed through presenter to get the route from interactor.
     func showMap() {
         mapView.isMyLocationEnabled = true
         locationManager.rx.locations
