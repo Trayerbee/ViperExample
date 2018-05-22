@@ -9,6 +9,7 @@
 import Viperit
 import UIKit.UIWindow
 import CoreLocation.CLLocation
+import RxSwift
 
 //MARK: - MapRouter API
 protocol MapRouterApi: RouterProtocol {
@@ -18,17 +19,19 @@ protocol MapRouterApi: RouterProtocol {
 
 //MARK: - MapView API
 protocol MapViewApi: UserInterfaceProtocol {
-    func showMap(to address: String, location: CLLocationCoordinate2D?)
+    func showMap()
+    func showRoute(with points: Observable<String>)
 }
 
 //MARK: - MapPresenter API
 protocol MapPresenterApi: PresenterProtocol {
     var address: String { get }
     func set(address: String)
-    func getDirections(to: CLLocationCoordinate2D?)
+    func getDirections(to: CLLocationCoordinate2D)
     func goBack()
 }
 
 //MARK: - MapInteractor API
 protocol MapInteractorApi: InteractorProtocol {
+    func loadRoute(location: CLLocationCoordinate2D, address: String) -> Observable<String>
 }

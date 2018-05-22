@@ -8,6 +8,8 @@
 
 import Foundation
 import Viperit
+import CoreLocation.CLLocation
+import RxSwift
 
 // MARK: - MapInteractor Class
 final class MapInteractor: Interactor {
@@ -15,6 +17,10 @@ final class MapInteractor: Interactor {
 
 // MARK: - MapInteractor API
 extension MapInteractor: MapInteractorApi {
+    func loadRoute(location: CLLocationCoordinate2D, address: String) -> Observable<String> {
+        return DirectionsResponse.fetchRoute(location: location, destination: address)
+            .map { $0.points }
+    }
 }
 
 // MARK: - Interactor Viper Components Api

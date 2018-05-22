@@ -20,6 +20,8 @@
 		40270AA320B224C8004F509A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA020B224C8004F509A /* Alamofire.framework */; };
 		40270AA420B224C8004F509A /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA120B224C8004F509A /* Freddy.framework */; };
 		40270AA520B224C8004F509A /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40270AA220B224C8004F509A /* RxAlamofire.framework */; };
+		4029DD2220B45EBE00E58EB6 /* CLLocationManagerDelegate+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029DD2120B45EBE00E58EB6 /* CLLocationManagerDelegate+Rx.swift */; };
+		4029DD2420B45F6E00E58EB6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029DD2320B45F6E00E58EB6 /* Utility.swift */; };
 		407D759820AEEF49007B0AF1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */; };
 		407D759920AEEF49007B0AF1 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */; };
 		407D759A20AEEF49007B0AF1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D759720AEEF49007B0AF1 /* GoogleMaps.framework */; };
@@ -99,6 +101,8 @@
 		40270AA020B224C8004F509A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		40270AA120B224C8004F509A /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = SOURCE_ROOT; };
 		40270AA220B224C8004F509A /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = SOURCE_ROOT; };
+		4029DD2120B45EBE00E58EB6 /* CLLocationManagerDelegate+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManagerDelegate+Rx.swift"; sourceTree = "<group>"; };
+		4029DD2320B45F6E00E58EB6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		407D759520AEEF45007B0AF1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		407D759620AEEF47007B0AF1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
 		407D759720AEEF49007B0AF1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -254,6 +258,22 @@
 			name = Google;
 			sourceTree = "<group>";
 		};
+		4029DD2020B45E9600E58EB6 /* DelegateProxy */ = {
+			isa = PBXGroup;
+			children = (
+				4029DD2120B45EBE00E58EB6 /* CLLocationManagerDelegate+Rx.swift */,
+			);
+			path = DelegateProxy;
+			sourceTree = "<group>";
+		};
+		4029DD2520B45F7A00E58EB6 /* Extensions+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				4029DD2320B45F6E00E58EB6 /* Utility.swift */,
+			);
+			path = "Extensions+Rx";
+			sourceTree = "<group>";
+		};
 		407D75C920AF5175007B0AF1 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +365,8 @@
 		40C319BF20AD7C6A00505C22 /* PetrolPatrol */ = {
 			isa = PBXGroup;
 			children = (
+				4029DD2520B45F7A00E58EB6 /* Extensions+Rx */,
+				4029DD2020B45E9600E58EB6 /* DelegateProxy */,
 				40270A7A20B13469004F509A /* Transport */,
 				407D75F220AF579C007B0AF1 /* Modules */,
 				407D75C920AF5175007B0AF1 /* Supporting */,
@@ -546,6 +568,7 @@
 				407D75EC20AF5785007B0AF1 /* MapPresenter.swift in Sources */,
 				407D75ED20AF5785007B0AF1 /* MapRouter.swift in Sources */,
 				407D75C220AF4BB2007B0AF1 /* GasStationsPresenter.swift in Sources */,
+				4029DD2220B45EBE00E58EB6 /* CLLocationManagerDelegate+Rx.swift in Sources */,
 				407D75C320AF4BB2007B0AF1 /* GasStationsRouter.swift in Sources */,
 				407D75DD20AF572E007B0AF1 /* SharingPresenter.swift in Sources */,
 				40270A7C20B1583C004F509A /* BorderedSquareButton.swift in Sources */,
@@ -558,6 +581,7 @@
 				407D75E120AF572E007B0AF1 /* SharingView.swift in Sources */,
 				40C319C120AD7C6A00505C22 /* AppDelegate.swift in Sources */,
 				407D75E020AF572E007B0AF1 /* SharingInteractor.swift in Sources */,
+				4029DD2420B45F6E00E58EB6 /* Utility.swift in Sources */,
 				407D75C820AF516F007B0AF1 /* AppModules.swift in Sources */,
 				407D75DF20AF572E007B0AF1 /* SharingModuleApi.swift in Sources */,
 				407D75C120AF4BB2007B0AF1 /* GasStationsDisplayData.swift in Sources */,

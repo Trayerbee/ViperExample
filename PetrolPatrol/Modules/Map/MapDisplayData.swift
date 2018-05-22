@@ -8,8 +8,9 @@
 
 import Foundation
 import Viperit
-import CoreLocation.CLLocation
+import RxSwift
 import RxCocoa
+import GoogleMaps
 
 // MARK: - MapDisplayData class
 final class MapDisplayData: DisplayData {
@@ -17,5 +18,19 @@ final class MapDisplayData: DisplayData {
         return DirectionsResponse.fetchRoute(location: location, destination: address)
             .map { $0.points }
             .asDriver(onErrorJustReturn: "")
+    }
+    
+    func drivibleRoute(from points: Observable<String>) -> Driver<(polyline: GMSPolyline, bounds: GMSCoordinateBounds)> {
+        return points.map {
+            (mapPoints) -> (polyline: GMSPolyline, bounds: GMSCoordinateBounds) in
+            guard let path = GMSPath.init(fromEncodedPath: mapPoints) else {
+                throw "Illegal path"
+            }
+            let polyline = GMSPolyline(path: path)
+            polyline.strokeWidth = 3
+            let bounds = GMSCoordinateBounds(path: path)
+            return (polyline: polyline, bounds: bounds)
+        }
+        .asDriver(onErrorJustReturn: (polyline: GMSPolyline(path: nil), bounds: GMSCoordinateBounds()))
     }
 }

@@ -14,7 +14,7 @@ import CoreLocation.CLLocation
 final class MapPresenter: Presenter {
     var address: String = ""
     override func viewIsAboutToAppear() {
-        view.showMap(to: self.address, location: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708))
+        view.showMap()
     }
 }
 
@@ -24,8 +24,8 @@ extension MapPresenter: MapPresenterApi {
         self.address = address
     }
     
-    func getDirections(to location: CLLocationCoordinate2D?) {
-        view.showMap(to: address, location: location)
+    func getDirections(to location: CLLocationCoordinate2D) {
+        view.showRoute(with: interactor.loadRoute(location: location, address: address))
     }
     
     func goBack() {
